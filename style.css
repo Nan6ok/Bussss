@@ -1,0 +1,62 @@
+ background: #fff;
+ font-family: Arial, sans-serif;
+ margin:0;
+ padding:0;
+}
+
+.container {
+ max-width:600px;
+ margin:30px auto;
+ padding:20px;
+ box-shadow:02px10px rgba(0,0,0,0.1);
+ border-radius:12px;
+ background: rgba(255,255,255,0.7);
+ backdrop-filter: blur(12px);
+}
+
+h1 {
+ text-align: center;
+ color: #3366ff;
+ margin-top:0;
+}
+
+button {
+ display: block;
+ margin:10px auto;
+ padding:10px20px;
+ background: #3366ff;
+ color: #fff;
+ border: none;
+ border-radius:6px;
+ font-size:1em;
+ cursor: pointer;
+}
+
+button:hover {
+ background: #2a55d4;
+}
+
+#routes, #aiChat {
+ margin-top:20px;
+ background: #e6f7ff;
+ border-radius:6px;
+ padding:12px;
+ min-height:40px;
+}
+
+.route-card {
+ margin-bottom:10px;
+ padding:10px;
+ background: white;
+ border:1px solid #ccc;
+ border-radius:6px;
+}
+
+.route-card strong {
+ color: #333;
+}
+
+#aiChat p {
+ margin:5px0;
+ font-size:0.9em;
+}
