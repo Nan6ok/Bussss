@@ -1,0 +1,73 @@
+const busRoutes = [
+ { company: "KMB", route: "1", from: "Stanley Plaza", to: "Central (Exchange Square)" },
+ { company: "KMB", route: "2", from: "Wah Kwai", to: "Central (Exchange Square)" },
+ { company: "KMB", route: "3", from: "Wong Chuk Hang", to: "Central (Rumsey Street)" },
+ // ... 加入所有其他九巴路線 { company: "CTB", route: "70", from: "Wah Kwai", to: "Central (Exchange Square)" },
+ { company: "CTB", route: "71", from: "Wong Chuk Hang", to: "Central (Rumsey Street)" },
+ // ... 加入所有其他城巴路線 { company: "LWB", route: "A31", from: "Tsuen Wan", to: "Airport" },
+ { company: "LWB", route: "A32", from: "Tsing Yi", to: "Airport" },
+ // ... 加入所有其他龍運路線 { company: "NLB", route: "1", from: "Mui Wo Ferry Pier", to: "Tai O" },
+ { company: "NLB", route: "2", from: "Ngong Ping", to: "Mui Wo Ferry Pier" },
+ // ... 加入所有其他新大嶼山路線];
+
+// 所有港鐵站 (MTR)
+const mtrStations = [
+ { line: "Island Line", station: "Chai Wan" },
+ { line: "Island Line", station: "Heng Fa Chuen" },
+ // ... 加入所有其他港鐵站 { line: "Tsuen Wan Line", station: "Tsuen Wan" },
+ { line: "Tsuen Wan Line", station: "Central" },
+ // ... 加入所有其他站 { line: "East Rail Line", station: "Hung Hom" },
+ { line: "East Rail Line", station: "Lo Wu" },
+ // ... 加入所有其他站];
+
+// 輕鐵站 (Light Rail)
+const lightRailStations = [
+ { line: "505", station: "Sam Shing" },
+ { line: "505", station: "Siu Hong" },
+ // ... 加入所有其他站];
+
+// 紅綠Van 路線 (示例)
+const vanRoutes = [
+ { type: "Red Van", route: "1", from: "Central", to: "Tung Chung" },
+ { type: "Green Van", route: "2", from: "Tsim Sha Tsui", to: "Sha Tin" },
+ // ... 加入所有其他Van路線];
+
+// 加載所有路線function loadRoutes() {
+ const routesDiv = document.getElementById('routes');
+ routesDiv.innerHTML = '';
+ busRoutes.forEach(route => {
+ const card = document.createElement('div');
+ card.className = 'route-card';
+ card.innerHTML = `<strong>${route.company} ${route.route}:</strong> ${route.from} → ${route.to}`;
+ routesDiv.appendChild(card);
+ });
+ vanRoutes.forEach(route => {
+ const card = document.createElement('div');
+ card.className = 'route-card';
+ card.innerHTML = `<strong>${route.type} ${route.route}:</strong> ${route.from} → ${route.to}`;
+ routesDiv.appendChild(card);
+ });
+}
+
+// 加載所有站點function loadStations() {
+ const stationsDiv = document.getElementById('stations');
+ stationsDiv.innerHTML = '';
+ mtrStations.forEach(station => {
+ const card = document.createElement('div');
+ card.className = 'station-card';
+ card.innerHTML = `<strong>${station.line}:</strong> ${station.station}`;
+ stationsDiv.appendChild(card);
+ });
+ lightRailStations.forEach(station => {
+ const card = document.createElement('div');
+ card.className = 'station-card';
+ card.innerHTML = `<strong>${station.line}:</strong> ${station.station}`;
+ stationsDiv.appendChild(card);
+ });
+}
+
+//事件監聽document.getElementById('loadRoutes').addEventListener('click', loadRoutes);
+document.getElementById('loadStations').addEventListener('click', loadStations);
+
+// 初始載入loadRoutes();
+loadStations();
