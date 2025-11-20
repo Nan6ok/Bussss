@@ -5,7 +5,7 @@
 }
 
 .container {
- max-width:600px;
+ max-width:900px;
  margin:30px auto;
  padding:20px;
  box-shadow:02px10px rgba(0,0,0,0.1);
@@ -36,7 +36,7 @@ button:hover {
  background: #2a55d4;
 }
 
-#routes, #aiChat {
+#routes, #stations {
  margin-top:20px;
  background: #e6f7ff;
  border-radius:6px;
@@ -44,7 +44,7 @@ button:hover {
  min-height:40px;
 }
 
-.route-card {
+.route-card, .station-card {
  margin-bottom:10px;
  padding:10px;
  background: white;
@@ -52,11 +52,11 @@ button:hover {
  border-radius:6px;
 }
 
-.route-card strong {
+.route-card strong, .station-card strong {
  color: #333;
 }
 
-#aiChat p {
+#routes p, #stations p {
  margin:5px0;
  font-size:0.9em;
 }
